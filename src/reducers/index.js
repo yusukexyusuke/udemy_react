@@ -13,6 +13,7 @@ const getPlaceParam = () => {
 const place = (state = getPlaceParam() || '東京タワー', action) => {
   switch (action.type) {
     case 'CHANGE_PLACE':
+      console.log("CHANGE_PLACE");
       return action.place;
     default:
       return state;

@@ -1,7 +1,11 @@
 import { geocode } from '../domain/Geocoder';
 import { searchHotelByLocation } from '../domain/HotelRepository';
 
-export const setPlace = place => dispatch => dispatch({ type: 'CHANGE_PLACE', place });
+export const setPlace = place => dispatch => {
+  console.log('before');
+  dispatch({ type: 'CHANGE_PLACE', place });
+  console.log('after');
+}
 
 export const setErrorMessage = message => dispatch => dispatch({ type: 'CHANGE_ERROR_MESSAGE', message });
 
